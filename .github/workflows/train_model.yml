@@ -1,12 +1,12 @@
 name: Training
 
-on:
-  push:
-    paths: 
-      - '.github/workflows/train_model.yml' 
-      - 'code/**' 
-  repository_dispatch:
-   types: [storage-blobcreated, storage-blobdeleted]
+on: [workflow_dispatch]
+  #push:
+  #  paths: 
+  #    - '.github/workflows/train_model.yml' 
+  #    - 'code/**' 
+  #repository_dispatch:
+  # types: [storage-blobcreated, storage-blobdeleted]
 
 jobs:
   deployment:
