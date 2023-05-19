@@ -1,8 +1,8 @@
 name: Model deployment
 
-on:
-  repository_dispatch:
-    types: [machinelearningservices-runcompleted]
+on: [workflow_dispatch]
+  #repository_dispatch:
+  #  types: [machinelearningservices-runcompleted]
 
 jobs:
   deploy:
