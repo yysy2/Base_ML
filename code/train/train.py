@@ -68,5 +68,8 @@ def parse_args():
 
 if __name__ == '__main__':
     args = parse_args()
-    titanic_df_dataset = Dataset.get_by_name('ML_MLOps', name='Titanic dataset new train')
+    ws = run.experiment.workspace
+    titanic_df_dataset = Dataset.get_by_name(ws, name='Titanic dataset new train')
+    data = dataset.to_pandas_dataframe()
+    run.log('len of data', len(data))
     main(args=args)
