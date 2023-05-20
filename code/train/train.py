@@ -70,6 +70,6 @@ if __name__ == '__main__':
     args = parse_args()
     ws = run.experiment.workspace
     titanic_df_dataset = Dataset.get_by_name(ws, name='Titanic dataset new train')
-    data = dataset.to_pandas_dataframe()
+    data = titanic_df_dataset.to_pandas_dataframe()
     run.log('len of data', len(data))
     main(args=args)
